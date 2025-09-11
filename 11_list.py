@@ -33,3 +33,22 @@ print(f'a의 마지막 방의 값={a[len(a)-1]}')
 print(f'a의 마지막 방의 값={a[-1]}')
 
 
+# 리스트 정렬(sort)
+shop_list.sort() # 오름차순 정렬
+print(f'shop_list:{shop_list}')
+
+shop_list.sort(reverse=True) # 내림차순 정렬
+print(f'shop_list:{shop_list}')
+
+# sorted 는 원본의 리스트를 정렬한 값을 새로운 리스트로 반환. 원본은 훼손하지 않고 새로운 리스트를 만든다.
+new_list = sorted(shop_list)
+print(f'new_list:{new_list}')
+
+# a의 2번 index(방)에 c를 넣는다.
+# insert 와 다른점은 해당 인덱스의 값을 지우고 그 자리에 들어간다는 것이다.
+a[2] = 'c'       #리스트 a의 2번 인덱스의 값을 c로 변경한다.
+print(f'a:{a}')
+
+# list 삭제
+del a[1]         #리스트 a의 1번 인덱스의 값을 지운다.
+print(f'a:{a}')
