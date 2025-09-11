@@ -22,7 +22,7 @@ print(f'3은 어디에?:{b.index(3)},{b.index(3,4)},{b.index(3,9)}번 인덱스'
 # idx = b.index(3,5)
 # print(f'3의 값은 {idx}번에 있다.')
 # idx = b.index(3,10)
-# print(f'3의 값은 {idx}번에 있다.')
+# print(f'3의 값은 {idx}번에 있다.')   ## 이거 내가 한거 망한거
 
 #idx = 0
 #while True:
