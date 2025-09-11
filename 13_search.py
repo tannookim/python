@@ -38,8 +38,8 @@ for n in b:  # for in 을 이용하면 list에 있는 값을 순서대로 하나
 
 # 리스트 요소 삭제
 # del a[3]과 a.remove(3) 의 차이
-# del은 특정 인덱스의 값을 지운다.
-# remove는 해당 값을 지운다.(처음 찾은 것만 지운다)
+# del은 특정 인덱스의 값을 지운다. ##del a[index num]
+# remove는 해당 값을 지운다.(처음 찾은 것만 지운다) ##remove(value)
 print(f'a:{a}')
 a.remove(3)
 print(f'a:{a}')
