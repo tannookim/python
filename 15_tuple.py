@@ -12,8 +12,8 @@ print(tu1+tu2)
 print(tu1*3)
 
 # tuple <-> list 간의 전환 ##tuple은 수정할 수 없으니까 수정하고 싶거나 삭제하고 싶을 때 list로 변환할 수 있다.
-tu2list = list(tu2)  ##tuple을 list로 변환하는 함수 list
+tu2list = list(tu2)  ##list함수 : tuple을 list로 변환하는 함수
 print(f'{tu2}->{tu2list}')
 
-list2tu = tuple(tu2list)  ##list를 tuple로 변환하는 함수 tuple
+list2tu = tuple(tu2list)  ##tuple함수 : list를 tuple로 변환하는 함수
 print(f'{tu2list}->{list2tu}')
