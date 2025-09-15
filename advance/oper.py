@@ -12,5 +12,5 @@ def minus(a,b):
 def multiply(a,b):
     return a*b
 
-def divide(a,b):
+def devision(a,b):
     return a/b
