@@ -4,7 +4,7 @@
 class Student: # Student 라는 클래스-학생과 관련된 함수 및 변수가 들어오겠구나 예측 가능
     pass # pass는 함수나 클래스에 아무것도 없을 때 오류방지를 위해 넣는 키워드
 
-std1 = Student() ## Student라는 class를 객체화(복사)해서 std1이라는 변수명에 담는 것
+std1 = Student() ## Student라는 class를 객체화(복사)해서 std1이라는 변수명에 담는 것 / 객체화 한다 == 복사해서 쓴다
 std2 = Student()
 std3 = Student()
 # 일련번호가 서로 다르다.
