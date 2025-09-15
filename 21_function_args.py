@@ -6,7 +6,7 @@ def plus(num=0):
 print(plus(5)) # => 10
 print(plus()) # TypeError: plus() missing 1 required positional argument: 'num' ##값 한개는 있어야 하는데 왜 안넣었니
 
-# 인자값의 종류를 튜플(수정이 불가능한 list 형태)로만 받겠다. ##인자값(매개변수) 앞에 * 붙이는거
+# 인자값의 종류를 튜플(수정이 불가능한 list 형태)로만 (출력)받겠다. ##인자값(매개변수) 앞에 * 붙이는거
 def tuple_args(*numbers):
     print(numbers)
     total = 0
@@ -19,4 +19,24 @@ print(tuple_args(1,2,3,4,5))
 
 # ** 는 매개변수를 사전형태로 받겠다.
 def dic_args(**dic):
-    pass
+    # 1. dic 에서 값만 빼온다.
+    values = dic.values()
+    #print(values)
+    # 2. 이 값들을 하나씩 더해 누적시킨다.
+    total = 0
+    for v in values:
+        #print(v)
+        total += v
+    # 3. 누적시킨 값을 밖으로 return 한다.
+    return total
+# 위 함수를 실행하면 입력된 값들의 합산이 반환되도록 하세요
+result = dic_args(kim=50, lee=100, park=70, na=90)
+print(result)
+
+##내가 풀어본거 - 실패
+# def dic_args(**dic):
+#     print(dic)
+#     for values in dic.values():
+#     return values
+# print(values)
+
