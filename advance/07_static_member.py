@@ -4,9 +4,12 @@ class Robot:
     def how_count(self):
         print(f'객체 매서드:{self.count}')
 
-    @classmethod # 원본영역의 변수를 건드릴 수 있다는 표시 ##이게 없으면 원본 밖에서 원본 매소드를 사용했을 때 self 없다고 오류뜸.
-    def std_count(self):                       ##멤버매서드이기 때문에 무조건 self를 넣어줘야함.
-        print(f'클래스 매서드:{self.count}')
+    # 2. self 는 내가 소속된 객체를 의미하는데 원본에서 왔으므로 객체가 없다.
+    # 3. @classmethod  어노테이션을 이용해 원본에서 직접 왔으므로 self 는 객체가 아닌 클래스라도 알려줌
+    # 4. 그러니 self 라는 이름은 객체를 받는 인자값으로 오해할수 있으니 cls 로 바꾸라고 권고
+    @classmethod # 원본영역의 변수를 건드릴 수 있다는 표시 ##이게 없으면 원본 밖에서 원본 매소드를 사용했을 때 self(객체) 없다고 오류뜸.
+    def std_count(cls):                       ##멤버매서드이기 때문에 무조건 인자값(매개변수)을 넣어줘야함.
+        print(f'클래스 매서드:{cls.count}')
 
 r1 = Robot()      ##class Robot의 객체(복사본) r1과 r2는 전혀 다른 객체임.
 r2 = Robot()
@@ -28,4 +31,7 @@ r2.how_count()
 
 # 마찬가지로 원본의 내용을 확인하고 싶다면 원본영역으로 가서 확인해야 한다.
 print(f'원본 count: {Robot.count}')
+
+# 1. 원본영역에서 함수를 실행하니 self 가 없다고 에러가남
+# TypeError: Robot.std_count() missing 1 required positional argument: 'self'
 Robot.std_count()                  ##너 왜 셀프 없어? TypeError: Robot.std_count() missing 1 required positional argument: 'self'
