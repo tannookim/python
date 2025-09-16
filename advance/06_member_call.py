@@ -18,6 +18,15 @@ class Car:
         else:
             print('시동이 이미 걸려있습니다.')
 
-    def change(self):
-        pass
+    def change(self,gear):         ##여기 gear는 매개변수
+        print(f'{gear} 단으로 변속 했습니다.')
+        self.gear += gear          ##매개변수로 받아온 gear가 self.gear가 될 것 class gear에도 들어감???????????
 
+# Car 클래스를 객체화(복사)
+# 객체를 통해 사용하고 싶은 멤버 호출
+car = Car()      ##class Car를 car라는 변수로 객체화
+# 시동 걸기
+car.start()
+# 변속하기
+car.change(3)
+print(f'현재 car의 gear 단수 : {car.gear}')
