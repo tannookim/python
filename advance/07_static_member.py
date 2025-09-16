@@ -27,4 +27,4 @@ r2.how_count()
 
 # 마찬가지로 원본의 내용을 확인하고 싶다면 원본영역으로 가서 확인해야 한다.
 print(f'원본 count: {Robot.count}')
-print(f'원본 함수: {Robot.std_count()}')
+print(f'원본 함수: {Robot.std_count()}')    ##이 상태에서 TypeError 뜨는 거 당연?
