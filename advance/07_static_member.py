@@ -4,7 +4,8 @@ class Robot:
     def how_count(self):
         print(f'객체 매서드:{self.count}')
 
-    def std_count(self):
+    @classmethod # 원본영역의 변수를 건드릴 수 있다는 표시 ##이게 없으면 원본 밖에서 원본 매소드를 사용했을 때 self 없다고 오류뜸.
+    def std_count(self):                       ##멤버매서드이기 때문에 무조건 self를 넣어줘야함.
         print(f'클래스 매서드:{self.count}')
 
 r1 = Robot()      ##class Robot의 객체(복사본) r1과 r2는 전혀 다른 객체임.
@@ -27,4 +28,4 @@ r2.how_count()
 
 # 마찬가지로 원본의 내용을 확인하고 싶다면 원본영역으로 가서 확인해야 한다.
 print(f'원본 count: {Robot.count}')
-print(f'원본 함수: {Robot.std_count()}')    ##이 상태에서 TypeError 뜨는 거 당연?
+Robot.std_count()                  ##너 왜 셀프 없어? TypeError: Robot.std_count() missing 1 required positional argument: 'self'
