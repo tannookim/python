@@ -100,3 +100,4 @@ print(dic)
 # dic.clear() : 사전 안의 내용을 모두 지운다.
 dic.clear()
 print(dic)
+
