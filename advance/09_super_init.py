@@ -30,5 +30,5 @@ class Teacher(SchoolMember):  # 자식
 
 # 1.Teacher 라는 클래스를 객체화 한다.(초기화를 위해 인자값(매개변수)를 전달)
 t = Teacher('김철수',33,5000000)
-# 5. name 과 age 는 부모 것 이지만 내(자식)것처럼 내(자식) 객체에서 가져다 쓸 수 있게 된다.
+# 5.name 과 age 는 부모 것 이지만 내(자식)것처럼 내(자식) 객체에서 가져다 쓸 수 있게 된다.
 print(f'{t.name}({t.age})-{t.salary}')
