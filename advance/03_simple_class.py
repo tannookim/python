@@ -13,3 +13,6 @@ std3 = Student()
 print(std1)
 print(std2)
 print(std3)
+
+
+##class를 객체화해서 사용하는 이유는 원본의 훼손을 방지하기 위해서
