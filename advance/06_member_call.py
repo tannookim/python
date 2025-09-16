@@ -18,7 +18,7 @@ class Car:
         else:
             print('시동이 이미 걸려있습니다.')
 
-    def change(self,gear):         ##여기 gear는 매개변수
+    def change(self,gear):         ##여기 self, gear는 인자값(매개변수)
         print(f'{gear} 단으로 변속 했습니다.')
         self.gear += gear          ##매개변수로 받아온 gear가 self.gear가 될 것 class gear에도 들어감???????????
 
